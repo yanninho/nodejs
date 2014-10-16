@@ -2,6 +2,9 @@ FROM debian
 
 RUN apt-get -y update && apt-get -y install wget && rm -rf /var/lib/apt/lists/*
 
+# install python
+RUN apt-get install -y python python-dev python-pip python-virtualenv
+
 #install nodejs
 RUN \
   cd /tmp && \
