@@ -1,5 +1,7 @@
 FROM debian
 
+RUN apt-get -y update && apt-get -y install wget 
+
 #install nodejs
 RUN \
   cd /tmp && \
