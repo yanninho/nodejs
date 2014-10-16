@@ -2,10 +2,11 @@ FROM debian
 
 RUN apt-get -y update && apt-get -y install wget
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-software-properties software-properties-common
-RUN rm -rf /var/lib/apt/lists/*
 
 # install python
 RUN apt-get install -y python python-dev python-pip python-virtualenv
+
+RUN rm -rf /var/lib/apt/lists/*
 
 #install nodejs
 RUN \
