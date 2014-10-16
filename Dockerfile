@@ -1,6 +1,6 @@
 FROM debian
 
-RUN apt-get -y update && apt-get -y install wget 
+RUN apt-get -y update && apt-get -y install wget && rm -rf /var/lib/apt/lists/*
 
 #install nodejs
 RUN \
